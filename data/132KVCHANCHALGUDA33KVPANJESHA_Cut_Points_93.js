@@ -1,0 +1,1 @@
+var json_132KVCHANCHALGUDA33KVPANJESHA_Cut_Points_93 = {"type":"FeatureCollection","name":"132KVCHANCHALGUDA33KVPANJESHA_Cut_Points_93","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}},"features":[]}

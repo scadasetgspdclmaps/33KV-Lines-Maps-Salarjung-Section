@@ -1,0 +1,1733 @@
+
+        #map {
+            background-color: #ffffff
+        }
+        html, body, #map {
+			overflow: hidden;
+        }
+        .col9{
+			height: 100%!important;
+		}
+		.col3{
+			height: 100%;
+			overflow: auto;
+		}
+        .info {
+            padding: 6px 8px;
+            font: 14px/16px Arial, Helvetica, sans-serif;
+            background-color:#f8f8f8 !important;
+            color: #444444 !important;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            border-radius: 5px;
+        }
+        .info h2 {
+            margin: 0 0 5px;
+        }
+        .leaflet-container {
+            background: #fff;
+            padding-right: 10px;
+        }
+        .leaflet-popup-scrolled {
+            border-bottom: unset!important;
+            border-top: unset!important;
+        }
+        .leaflet-popup-content{
+            max-height: 70vh;
+            max-width: 70vw;
+        }
+        .leaflet-popup-content.media{
+            width: auto!important;
+            height: auto!important;
+        }
+        .leaflet-popup-content th {
+            text-align: left;
+            vertical-align: top;
+            min-width: 75px;
+        }
+        .leaflet-popup-content td {
+            min-width: 75px;
+        }
+        .leaflet-popup-content td img {
+            max-height: 60vh;
+            max-width: 60vw;
+        }
+
+        .leaflet-tooltip {
+            background: none;
+            box-shadow: none;
+            border: none;
+        }
+        .leaflet-tooltip-left:before, .leaflet-tooltip-right:before {
+            border: 0px;
+        }
+        }
+        .fa, .leaflet-container, a {
+            color: #444444 !important;
+        }
+        .leaflet-control-zoom-in, .leaflet-control-zoom-out,
+        .leaflet-control-locate a,
+        .leaflet-touch .leaflet-control-geocoder-icon,
+        .leaflet-control-search .search-button,
+         .leaflet-control-measure {
+            background-color: #f8f8f8 !important;
+            border-radius: 0px !important;
+            color: #444444 !important;
+        }
+        .abstract {
+            font: bold 18px 'Lucida Console', Monaco, monospace;
+            text-indent: 1px;
+            background-color: #f8f8f8 !important;
+            width: 30px !important;
+            color: #444444 !important;
+            height: 30px !important;
+            text-align: center !important;
+            line-height: 30px !important;
+        }
+        .abstractUncollapsed {
+            padding: 6px 8px;
+            font: 12px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
+            background-color:#f8f8f8 !important;
+            color: #444444 !important;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            border-radius: 5px;
+            max-width: 40%;
+        }
+        .leaflet-control {
+            box-shadow: 0 3px 14px rgba(0, 0, 0, 0.4)!important;
+            border-radius: 4px;
+        }
+        .leaflet-touch .leaflet-control-layers,
+        .leaflet-touch .leaflet-bar,
+        .leaflet-control-search,
+        .leaflet-control-measure {
+            border: 3px solid rgba(255,255,255,.4) !important;
+        }
+        .leaflet-control-attribution a {
+            color: #0078A8 !important;
+        }
+        .leaflet-control-scale-line {
+            border: 2px solid #f8f8f8 !important;
+            border-top: none !important;
+            color: black !important;
+        }
+        .leaflet-control-search .search-button {
+            width: 30px !important;
+            height: 30px !important;
+            font-size: 13px !important;
+            text-align: center !important;
+            cursor: pointer;
+        }
+        .search-button.fa.fa-binoculars{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .leaflet-control-measure .leaflet-control {
+            width: 30px !important;
+            height: 30px !important;
+        }
+        .leaflet-container .leaflet-control-search{
+            background: none !important;
+        }
+        .leaflet-control-search .search-input {
+            margin: 0px 0px 0px 0px !important;
+            height: 30px !important;
+        }
+        .leaflet-control-measure {
+            background: none!important;
+            border-radius: 4px !important;
+        }
+        .leaflet-control-measure .leaflet-control-measure-interaction {
+            background-color: #f8f8f8 !important;
+        }
+        .leaflet-touch .leaflet-control-measure
+        .leaflet-control-measure-toggle,
+        .leaflet-touch .leaflet-control-measure
+        .leaflet-control-measure-toggle:hover {
+            width: 30px !important;
+            height: 30px !important;
+            border-radius: 0px !important;
+            background-color: #f8f8f8 !important;
+            color: #444444 !important;
+            font-size: 13px;
+            line-height: 30px;
+            text-align: center;
+            text-indent: 0%;
+        }
+        .leaflet-control-layers {
+			padding: 2px;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+            background-color: #f8f8f8 !important;
+            color: #444444 !important;
+
+		}
+        .leaflet-control-layers-expanded {
+			padding-left: 6px;
+		}	
+        .leaflet-control-layers-expanded .leaflet-control-layers-toggle {
+            display: block;
+            background-image: none;
+			text-decoration: none;
+            margin-bottom: 3px;
+        }
+        .leaflet-control-layers-expanded .leaflet-control-layers-toggle::after {
+            content: '»';
+            font-size: x-large;
+            color: #444444 !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+        }
+        .leaflet-overlay-pane {
+            z-index: 550;
+        }
+        .leaflet-popup-pane {
+            z-index: 700;
+        }
+        #gcd-button-control {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .leaflet-control-layers-expanded .leaflet-control-layers-toggle {
+            display: none;
+        }
+        .css_ZooparklineABswitch33kvAttapurssOHfeederbaradariOHfeeder_0 {
+            text-shadow: -2px -2px 0 #ffffff,
+                -2px -1px 0 #ffffff,
+                -2px 0px 0 #ffffff,
+                -2px 1px 0 #ffffff,
+                -2px 2px 0 #ffffff,
+                -1px -2px 0 #ffffff,
+                -1px -1px 0 #ffffff,
+                -1px 0px 0 #ffffff,
+                -1px 1px 0 #ffffff,
+                -1px 2px 0 #ffffff,
+                0px -2px 0 #ffffff,
+                0px -1px 0 #ffffff,
+                0px 1px 0 #ffffff,
+                0px 2px 0 #ffffff,
+                1px -2px 0 #ffffff,
+                1px -1px 0 #ffffff,
+                1px 0px 0 #ffffff,
+                1px 1px 0 #ffffff,
+                1px 2px 0 #ffffff,
+                2px -2px 0 #ffffff,
+                2px -1px 0 #ffffff,
+                2px 0px 0 #ffffff,
+                2px 1px 0 #ffffff,
+                2px 2px 0 #ffffff;
+        }
+        .css_ZooparklineABswitch33kvAttapurssOHfeederbaradariOHfeeder_AB_Switch_1 {
+            text-shadow: -2px -2px 0 #ffffff,
+                -2px -1px 0 #ffffff,
+                -2px 0px 0 #ffffff,
+                -2px 1px 0 #ffffff,
+                -2px 2px 0 #ffffff,
+                -1px -2px 0 #ffffff,
+                -1px -1px 0 #ffffff,
+                -1px 0px 0 #ffffff,
+                -1px 1px 0 #ffffff,
+                -1px 2px 0 #ffffff,
+                0px -2px 0 #ffffff,
+                0px -1px 0 #ffffff,
+                0px 1px 0 #ffffff,
+                0px 2px 0 #ffffff,
+                1px -2px 0 #ffffff,
+                1px -1px 0 #ffffff,
+                1px 0px 0 #ffffff,
+                1px 1px 0 #ffffff,
+                1px 2px 0 #ffffff,
+                2px -2px 0 #ffffff,
+                2px -1px 0 #ffffff,
+                2px 0px 0 #ffffff,
+                2px 1px 0 #ffffff,
+                2px 2px 0 #ffffff;
+        }
+        .css_ZooparklineABswitch33kvAttapurssOHfeederbaradariOHfeeder_Double_Pole_Structure_2 {
+            text-shadow: -2px -2px 0 #ffffff,
+                -2px -1px 0 #ffffff,
+                -2px 0px 0 #ffffff,
+                -2px 1px 0 #ffffff,
+                -2px 2px 0 #ffffff,
+                -1px -2px 0 #ffffff,
+                -1px -1px 0 #ffffff,
+                -1px 0px 0 #ffffff,
+                -1px 1px 0 #ffffff,
+                -1px 2px 0 #ffffff,
+                0px -2px 0 #ffffff,
+                0px -1px 0 #ffffff,
+                0px 1px 0 #ffffff,
+                0px 2px 0 #ffffff,
+                1px -2px 0 #ffffff,
+                1px -1px 0 #ffffff,
+                1px 0px 0 #ffffff,
+                1px 1px 0 #ffffff,
+                1px 2px 0 #ffffff,
+                2px -2px 0 #ffffff,
+                2px -1px 0 #ffffff,
+                2px 0px 0 #ffffff,
+                2px 1px 0 #ffffff,
+                2px 2px 0 #ffffff;
+        }
+        .css_ZooparklineABswitch33kvAttapurssOHfeederbaradariOHfeeder_Cut_Points_3 {
+            text-shadow: -2px -2px 0 #ffffff,
+                -2px -1px 0 #ffffff,
+                -2px 0px 0 #ffffff,
+                -2px 1px 0 #ffffff,
+                -2px 2px 0 #ffffff,
+                -1px -2px 0 #ffffff,
+                -1px -1px 0 #ffffff,
+                -1px 0px 0 #ffffff,
+                -1px 1px 0 #ffffff,
+                -1px 2px 0 #ffffff,
+                0px -2px 0 #ffffff,
+                0px -1px 0 #ffffff,
+                0px 1px 0 #ffffff,
+                0px 2px 0 #ffffff,
+                1px -2px 0 #ffffff,
+                1px -1px 0 #ffffff,
+                1px 0px 0 #ffffff,
+                1px 1px 0 #ffffff,
+                1px 2px 0 #ffffff,
+                2px -2px 0 #ffffff,
+                2px -1px 0 #ffffff,
+                2px 0px 0 #ffffff,
+                2px 1px 0 #ffffff,
+                2px 2px 0 #ffffff;
+        }
+        .css_Pilerno143orGoldenpalacehotel33kvHydergudassonHyderguda2OHfeeder_5 {
+            text-shadow: -2px -2px 0 #ffffff,
+                -2px -1px 0 #ffffff,
+                -2px 0px 0 #ffffff,
+                -2px 1px 0 #ffffff,
+                -2px 2px 0 #ffffff,
+                -1px -2px 0 #ffffff,
+                -1px -1px 0 #ffffff,
+                -1px 0px 0 #ffffff,
+                -1px 1px 0 #ffffff,
+                -1px 2px 0 #ffffff,
+                0px -2px 0 #ffffff,
+                0px -1px 0 #ffffff,
+                0px 1px 0 #ffffff,
+                0px 2px 0 #ffffff,
+                1px -2px 0 #ffffff,
+                1px -1px 0 #ffffff,
+                1px 0px 0 #ffffff,
+                1px 1px 0 #ffffff,
+                1px 2px 0 #ffffff,
+                2px -2px 0 #ffffff,
+                2px -1px 0 #ffffff,
+                2px 0px 0 #ffffff,
+                2px 1px 0 #ffffff,
+                2px 2px 0 #ffffff;
+        }
+        .css_Pilerno143orGoldenpalacehotel33kvHydergudassonHyderguda2OHfeeder_AB_Switch_6 {
+            text-shadow: -2px -2px 0 #ffffff,
+                -2px -1px 0 #ffffff,
+                -2px 0px 0 #ffffff,
+                -2px 1px 0 #ffffff,
+                -2px 2px 0 #ffffff,
+                -1px -2px 0 #ffffff,
+                -1px -1px 0 #ffffff,
+                -1px 0px 0 #ffffff,
+                -1px 1px 0 #ffffff,
+                -1px 2px 0 #ffffff,
+                0px -2px 0 #ffffff,
+                0px -1px 0 #ffffff,
+                0px 1px 0 #ffffff,
+                0px 2px 0 #ffffff,
+                1px -2px 0 #ffffff,
+                1px -1px 0 #ffffff,
+                1px 0px 0 #ffffff,
+                1px 1px 0 #ffffff,
+                1px 2px 0 #ffffff,
+                2px -2px 0 #ffffff,
+                2px -1px 0 #ffffff,
+                2px 0px 0 #ffffff,
+                2px 1px 0 #ffffff,
+                2px 2px 0 #ffffff;
+        }
+        .css_Pilerno143orGoldenpalacehotel33kvHydergudassonHyderguda2OHfeeder_Double_Pole_Structure_7 {
+            text-shadow: -2px -2px 0 #ffffff,
+                -2px -1px 0 #ffffff,
+                -2px 0px 0 #ffffff,
+                -2px 1px 0 #ffffff,
+                -2px 2px 0 #ffffff,
+                -1px -2px 0 #ffffff,
+                -1px -1px 0 #ffffff,
+                -1px 0px 0 #ffffff,
+                -1px 1px 0 #ffffff,
+                -1px 2px 0 #ffffff,
+                0px -2px 0 #ffffff,
+                0px -1px 0 #ffffff,
+                0px 1px 0 #ffffff,
+                0px 2px 0 #ffffff,
+                1px -2px 0 #ffffff,
+                1px -1px 0 #ffffff,
+                1px 0px 0 #ffffff,
+                1px 1px 0 #ffffff,
+                1px 2px 0 #ffffff,
+                2px -2px 0 #ffffff,
+                2px -1px 0 #ffffff,
+                2px 0px 0 #ffffff,
+                2px 1px 0 #ffffff,
+                2px 2px 0 #ffffff;
+        }
+        .css_OsmhosplineABswitch33kvSalarjungssseetarambaghOHfeeder_10 {
+            text-shadow: -2px -2px 0 #ffffff,
+                -2px -1px 0 #ffffff,
+                -2px 0px 0 #ffffff,
+                -2px 1px 0 #ffffff,
+                -2px 2px 0 #ffffff,
+                -1px -2px 0 #ffffff,
+                -1px -1px 0 #ffffff,
+                -1px 0px 0 #ffffff,
+                -1px 1px 0 #ffffff,
+                -1px 2px 0 #ffffff,
+                0px -2px 0 #ffffff,
+                0px -1px 0 #ffffff,
+                0px 1px 0 #ffffff,
+                0px 2px 0 #ffffff,
+                1px -2px 0 #ffffff,
+                1px -1px 0 #ffffff,
+                1px 0px 0 #ffffff,
+                1px 1px 0 #ffffff,
+                1px 2px 0 #ffffff,
+                2px -2px 0 #ffffff,
+                2px -1px 0 #ffffff,
+                2px 0px 0 #ffffff,
+                2px 1px 0 #ffffff,
+                2px 2px 0 #ffffff;
+        }
+        .css_OsmhosplineABswitch33kvSalarjungssseetarambaghOHfeeder_AB_Switch_11 {
+            text-shadow: -2px -2px 0 #ffffff,
+                -2px -1px 0 #ffffff,
+                -2px 0px 0 #ffffff,
+                -2px 1px 0 #ffffff,
+                -2px 2px 0 #ffffff,
+                -1px -2px 0 #ffffff,
+                -1px -1px 0 #ffffff,
+                -1px 0px 0 #ffffff,
+                -1px 1px 0 #ffffff,
+                -1px 2px 0 #ffffff,
+                0px -2px 0 #ffffff,
+                0px -1px 0 #ffffff,
+                0px 1px 0 #ffffff,
+                0px 2px 0 #ffffff,
+                1px -2px 0 #ffffff,
+                1px -1px 0 #ffffff,
+                1px 0px 0 #ffffff,
+                1px 1px 0 #ffffff,
+                1px 2px 0 #ffffff,
+                2px -2px 0 #ffffff,
+                2px -1px 0 #ffffff,
+                2px 0px 0 #ffffff,
+                2px 1px 0 #ffffff,
+                2px 2px 0 #ffffff;
+        }
+        .css_OsmhosplineABswitch33kvSalarjungssseetarambaghOHfeeder_Double_Pole_Structure_12 {
+            text-shadow: -2px -2px 0 #ffffff,
+                -2px -1px 0 #ffffff,
+                -2px 0px 0 #ffffff,
+                -2px 1px 0 #ffffff,
+                -2px 2px 0 #ffffff,
+                -1px -2px 0 #ffffff,
+                -1px -1px 0 #ffffff,
+                -1px 0px 0 #ffffff,
+                -1px 1px 0 #ffffff,
+                -1px 2px 0 #ffffff,
+                0px -2px 0 #ffffff,
+                0px -1px 0 #ffffff,
+                0px 1px 0 #ffffff,
+                0px 2px 0 #ffffff,
+                1px -2px 0 #ffffff,
+                1px -1px 0 #ffffff,
+                1px 0px 0 #ffffff,
+                1px 1px 0 #ffffff,
+                1px 2px 0 #ffffff,
+                2px -2px 0 #ffffff,
+                2px -1px 0 #ffffff,
+                2px 0px 0 #ffffff,
+                2px 1px 0 #ffffff,
+                2px 2px 0 #ffffff;
+        }
+        .css_CityCollagemusiriverABswitch33kvpetlaburzssseetarambaghOHfeeder_15 {
+            text-shadow: -2px -2px 0 #ffffff,
+                -2px -1px 0 #ffffff,
+                -2px 0px 0 #ffffff,
+                -2px 1px 0 #ffffff,
+                -2px 2px 0 #ffffff,
+                -1px -2px 0 #ffffff,
+                -1px -1px 0 #ffffff,
+                -1px 0px 0 #ffffff,
+                -1px 1px 0 #ffffff,
+                -1px 2px 0 #ffffff,
+                0px -2px 0 #ffffff,
+                0px -1px 0 #ffffff,
+                0px 1px 0 #ffffff,
+                0px 2px 0 #ffffff,
+                1px -2px 0 #ffffff,
+                1px -1px 0 #ffffff,
+                1px 0px 0 #ffffff,
+                1px 1px 0 #ffffff,
+                1px 2px 0 #ffffff,
+                2px -2px 0 #ffffff,
+                2px -1px 0 #ffffff,
+                2px 0px 0 #ffffff,
+                2px 1px 0 #ffffff,
+                2px 2px 0 #ffffff;
+        }
+        .css_CityCollagemusiriverABswitch33kvpetlaburzssseetarambaghOHfeeder_AB_Switch_16 {
+            text-shadow: -2px -2px 0 #ffffff,
+                -2px -1px 0 #ffffff,
+                -2px 0px 0 #ffffff,
+                -2px 1px 0 #ffffff,
+                -2px 2px 0 #ffffff,
+                -1px -2px 0 #ffffff,
+                -1px -1px 0 #ffffff,
+                -1px 0px 0 #ffffff,
+                -1px 1px 0 #ffffff,
+                -1px 2px 0 #ffffff,
+                0px -2px 0 #ffffff,
+                0px -1px 0 #ffffff,
+                0px 1px 0 #ffffff,
+                0px 2px 0 #ffffff,
+                1px -2px 0 #ffffff,
+                1px -1px 0 #ffffff,
+                1px 0px 0 #ffffff,
+                1px 1px 0 #ffffff,
+                1px 2px 0 #ffffff,
+                2px -2px 0 #ffffff,
+                2px -1px 0 #ffffff,
+                2px 0px 0 #ffffff,
+                2px 1px 0 #ffffff,
+                2px 2px 0 #ffffff;
+        }
+        .css_CityCollagemusiriverABswitch33kvpetlaburzssseetarambaghOHfeeder_Double_Pole_Structure_17 {
+            text-shadow: -2px -2px 0 #ffffff,
+                -2px -1px 0 #ffffff,
+                -2px 0px 0 #ffffff,
+                -2px 1px 0 #ffffff,
+                -2px 2px 0 #ffffff,
+                -1px -2px 0 #ffffff,
+                -1px -1px 0 #ffffff,
+                -1px 0px 0 #ffffff,
+                -1px 1px 0 #ffffff,
+                -1px 2px 0 #ffffff,
+                0px -2px 0 #ffffff,
+                0px -1px 0 #ffffff,
+                0px 1px 0 #ffffff,
+                0px 2px 0 #ffffff,
+                1px -2px 0 #ffffff,
+                1px -1px 0 #ffffff,
+                1px 0px 0 #ffffff,
+                1px 1px 0 #ffffff,
+                1px 2px 0 #ffffff,
+                2px -2px 0 #ffffff,
+                2px -1px 0 #ffffff,
+                2px 0px 0 #ffffff,
+                2px 1px 0 #ffffff,
+                2px 2px 0 #ffffff;
+        }
+        .css_CityCollagemusiriverABswitch33kvpetlaburzssseetarambaghOHfeeder_Cut_Points_18 {
+            text-shadow: -2px -2px 0 #ffffff,
+                -2px -1px 0 #ffffff,
+                -2px 0px 0 #ffffff,
+                -2px 1px 0 #ffffff,
+                -2px 2px 0 #ffffff,
+                -1px -2px 0 #ffffff,
+                -1px -1px 0 #ffffff,
+                -1px 0px 0 #ffffff,
+                -1px 1px 0 #ffffff,
+                -1px 2px 0 #ffffff,
+                0px -2px 0 #ffffff,
+                0px -1px 0 #ffffff,
+                0px 1px 0 #ffffff,
+                0px 2px 0 #ffffff,
+                1px -2px 0 #ffffff,
+                1px -1px 0 #ffffff,
+                1px 0px 0 #ffffff,
+                1px 1px 0 #ffffff,
+                1px 2px 0 #ffffff,
+                2px -2px 0 #ffffff,
+                2px -1px 0 #ffffff,
+                2px 0px 0 #ffffff,
+                2px 1px 0 #ffffff,
+                2px 2px 0 #ffffff;
+        }
+        .css_33kvchandulalbaradariss33kvDevibaghSSUG_20 {
+            text-shadow: -2px -2px 0 #ffffff,
+                -2px -1px 0 #ffffff,
+                -2px 0px 0 #ffffff,
+                -2px 1px 0 #ffffff,
+                -2px 2px 0 #ffffff,
+                -1px -2px 0 #ffffff,
+                -1px -1px 0 #ffffff,
+                -1px 0px 0 #ffffff,
+                -1px 1px 0 #ffffff,
+                -1px 2px 0 #ffffff,
+                0px -2px 0 #ffffff,
+                0px -1px 0 #ffffff,
+                0px 1px 0 #ffffff,
+                0px 2px 0 #ffffff,
+                1px -2px 0 #ffffff,
+                1px -1px 0 #ffffff,
+                1px 0px 0 #ffffff,
+                1px 1px 0 #ffffff,
+                1px 2px 0 #ffffff,
+                2px -2px 0 #ffffff,
+                2px -1px 0 #ffffff,
+                2px 0px 0 #ffffff,
+                2px 1px 0 #ffffff,
+                2px 2px 0 #ffffff;
+        }
+        .css_33kvchandulalbaradariss33kvDevibaghSSUG_AB_Switch_21 {
+            text-shadow: -2px -2px 0 #ffffff,
+                -2px -1px 0 #ffffff,
+                -2px 0px 0 #ffffff,
+                -2px 1px 0 #ffffff,
+                -2px 2px 0 #ffffff,
+                -1px -2px 0 #ffffff,
+                -1px -1px 0 #ffffff,
+                -1px 0px 0 #ffffff,
+                -1px 1px 0 #ffffff,
+                -1px 2px 0 #ffffff,
+                0px -2px 0 #ffffff,
+                0px -1px 0 #ffffff,
+                0px 1px 0 #ffffff,
+                0px 2px 0 #ffffff,
+                1px -2px 0 #ffffff,
+                1px -1px 0 #ffffff,
+                1px 0px 0 #ffffff,
+                1px 1px 0 #ffffff,
+                1px 2px 0 #ffffff,
+                2px -2px 0 #ffffff,
+                2px -1px 0 #ffffff,
+                2px 0px 0 #ffffff,
+                2px 1px 0 #ffffff,
+                2px 2px 0 #ffffff;
+        }
+        .css_33kvchandulalbaradariss33kvDevibaghSSUG_Double_Pole_Structure_22 {
+            text-shadow: -2px -2px 0 #ffffff,
+                -2px -1px 0 #ffffff,
+                -2px 0px 0 #ffffff,
+                -2px 1px 0 #ffffff,
+                -2px 2px 0 #ffffff,
+                -1px -2px 0 #ffffff,
+                -1px -1px 0 #ffffff,
+                -1px 0px 0 #ffffff,
+                -1px 1px 0 #ffffff,
+                -1px 2px 0 #ffffff,
+                0px -2px 0 #ffffff,
+                0px -1px 0 #ffffff,
+                0px 1px 0 #ffffff,
+                0px 2px 0 #ffffff,
+                1px -2px 0 #ffffff,
+                1px -1px 0 #ffffff,
+                1px 0px 0 #ffffff,
+                1px 1px 0 #ffffff,
+                1px 2px 0 #ffffff,
+                2px -2px 0 #ffffff,
+                2px -1px 0 #ffffff,
+                2px 0px 0 #ffffff,
+                2px 1px 0 #ffffff,
+                2px 2px 0 #ffffff;
+        }
+        .css_33KVPetlaburzDevibagh_25 {
+            text-shadow: -2px -2px 0 #ffffff,
+                -2px -1px 0 #ffffff,
+                -2px 0px 0 #ffffff,
+                -2px 1px 0 #ffffff,
+                -2px 2px 0 #ffffff,
+                -1px -2px 0 #ffffff,
+                -1px -1px 0 #ffffff,
+                -1px 0px 0 #ffffff,
+                -1px 1px 0 #ffffff,
+                -1px 2px 0 #ffffff,
+                0px -2px 0 #ffffff,
+                0px -1px 0 #ffffff,
+                0px 1px 0 #ffffff,
+                0px 2px 0 #ffffff,
+                1px -2px 0 #ffffff,
+                1px -1px 0 #ffffff,
+                1px 0px 0 #ffffff,
+                1px 1px 0 #ffffff,
+                1px 2px 0 #ffffff,
+                2px -2px 0 #ffffff,
+                2px -1px 0 #ffffff,
+                2px 0px 0 #ffffff,
+                2px 1px 0 #ffffff,
+                2px 2px 0 #ffffff;
+        }
+        .css_33KVPetlaburzDevibagh_AB_Switch_26 {
+            text-shadow: -2px -2px 0 #ffffff,
+                -2px -1px 0 #ffffff,
+                -2px 0px 0 #ffffff,
+                -2px 1px 0 #ffffff,
+                -2px 2px 0 #ffffff,
+                -1px -2px 0 #ffffff,
+                -1px -1px 0 #ffffff,
+                -1px 0px 0 #ffffff,
+                -1px 1px 0 #ffffff,
+                -1px 2px 0 #ffffff,
+                0px -2px 0 #ffffff,
+                0px -1px 0 #ffffff,
+                0px 1px 0 #ffffff,
+                0px 2px 0 #ffffff,
+                1px -2px 0 #ffffff,
+                1px -1px 0 #ffffff,
+                1px 0px 0 #ffffff,
+                1px 1px 0 #ffffff,
+                1px 2px 0 #ffffff,
+                2px -2px 0 #ffffff,
+                2px -1px 0 #ffffff,
+                2px 0px 0 #ffffff,
+                2px 1px 0 #ffffff,
+                2px 2px 0 #ffffff;
+        }
+        .css_33KVPetlaburzDevibagh_Double_Pole_Structure_27 {
+            text-shadow: -2px -2px 0 #ffffff,
+                -2px -1px 0 #ffffff,
+                -2px 0px 0 #ffffff,
+                -2px 1px 0 #ffffff,
+                -2px 2px 0 #ffffff,
+                -1px -2px 0 #ffffff,
+                -1px -1px 0 #ffffff,
+                -1px 0px 0 #ffffff,
+                -1px 1px 0 #ffffff,
+                -1px 2px 0 #ffffff,
+                0px -2px 0 #ffffff,
+                0px -1px 0 #ffffff,
+                0px 1px 0 #ffffff,
+                0px 2px 0 #ffffff,
+                1px -2px 0 #ffffff,
+                1px -1px 0 #ffffff,
+                1px 0px 0 #ffffff,
+                1px 1px 0 #ffffff,
+                1px 2px 0 #ffffff,
+                2px -2px 0 #ffffff,
+                2px -1px 0 #ffffff,
+                2px 0px 0 #ffffff,
+                2px 1px 0 #ffffff,
+                2px 2px 0 #ffffff;
+        }
+        .css_33KVHydergudaIIAttapur_30 {
+            text-shadow: -2px -2px 0 #ffffff,
+                -2px -1px 0 #ffffff,
+                -2px 0px 0 #ffffff,
+                -2px 1px 0 #ffffff,
+                -2px 2px 0 #ffffff,
+                -1px -2px 0 #ffffff,
+                -1px -1px 0 #ffffff,
+                -1px 0px 0 #ffffff,
+                -1px 1px 0 #ffffff,
+                -1px 2px 0 #ffffff,
+                0px -2px 0 #ffffff,
+                0px -1px 0 #ffffff,
+                0px 1px 0 #ffffff,
+                0px 2px 0 #ffffff,
+                1px -2px 0 #ffffff,
+                1px -1px 0 #ffffff,
+                1px 0px 0 #ffffff,
+                1px 1px 0 #ffffff,
+                1px 2px 0 #ffffff,
+                2px -2px 0 #ffffff,
+                2px -1px 0 #ffffff,
+                2px 0px 0 #ffffff,
+                2px 1px 0 #ffffff,
+                2px 2px 0 #ffffff;
+        }
+        .css_33KVHydergudaIIAttapur_AB_Switch_31 {
+            text-shadow: -2px -2px 0 #ffffff,
+                -2px -1px 0 #ffffff,
+                -2px 0px 0 #ffffff,
+                -2px 1px 0 #ffffff,
+                -2px 2px 0 #ffffff,
+                -1px -2px 0 #ffffff,
+                -1px -1px 0 #ffffff,
+                -1px 0px 0 #ffffff,
+                -1px 1px 0 #ffffff,
+                -1px 2px 0 #ffffff,
+                0px -2px 0 #ffffff,
+                0px -1px 0 #ffffff,
+                0px 1px 0 #ffffff,
+                0px 2px 0 #ffffff,
+                1px -2px 0 #ffffff,
+                1px -1px 0 #ffffff,
+                1px 0px 0 #ffffff,
+                1px 1px 0 #ffffff,
+                1px 2px 0 #ffffff,
+                2px -2px 0 #ffffff,
+                2px -1px 0 #ffffff,
+                2px 0px 0 #ffffff,
+                2px 1px 0 #ffffff,
+                2px 2px 0 #ffffff;
+        }
+        .css_33KVHydergudaIIAttapur_Double_Pole_Structure_32 {
+            text-shadow: -2px -2px 0 #ffffff,
+                -2px -1px 0 #ffffff,
+                -2px 0px 0 #ffffff,
+                -2px 1px 0 #ffffff,
+                -2px 2px 0 #ffffff,
+                -1px -2px 0 #ffffff,
+                -1px -1px 0 #ffffff,
+                -1px 0px 0 #ffffff,
+                -1px 1px 0 #ffffff,
+                -1px 2px 0 #ffffff,
+                0px -2px 0 #ffffff,
+                0px -1px 0 #ffffff,
+                0px 1px 0 #ffffff,
+                0px 2px 0 #ffffff,
+                1px -2px 0 #ffffff,
+                1px -1px 0 #ffffff,
+                1px 0px 0 #ffffff,
+                1px 1px 0 #ffffff,
+                1px 2px 0 #ffffff,
+                2px -2px 0 #ffffff,
+                2px -1px 0 #ffffff,
+                2px 0px 0 #ffffff,
+                2px 1px 0 #ffffff,
+                2px 2px 0 #ffffff;
+        }
+        .css_33KVChandulalBaradariKhilwath_35 {
+            text-shadow: -2px -2px 0 #ffffff,
+                -2px -1px 0 #ffffff,
+                -2px 0px 0 #ffffff,
+                -2px 1px 0 #ffffff,
+                -2px 2px 0 #ffffff,
+                -1px -2px 0 #ffffff,
+                -1px -1px 0 #ffffff,
+                -1px 0px 0 #ffffff,
+                -1px 1px 0 #ffffff,
+                -1px 2px 0 #ffffff,
+                0px -2px 0 #ffffff,
+                0px -1px 0 #ffffff,
+                0px 1px 0 #ffffff,
+                0px 2px 0 #ffffff,
+                1px -2px 0 #ffffff,
+                1px -1px 0 #ffffff,
+                1px 0px 0 #ffffff,
+                1px 1px 0 #ffffff,
+                1px 2px 0 #ffffff,
+                2px -2px 0 #ffffff,
+                2px -1px 0 #ffffff,
+                2px 0px 0 #ffffff,
+                2px 1px 0 #ffffff,
+                2px 2px 0 #ffffff;
+        }
+        .css_33KVChandulalBaradariKhilwath_AB_Switch_36 {
+            text-shadow: -2px -2px 0 #ffffff,
+                -2px -1px 0 #ffffff,
+                -2px 0px 0 #ffffff,
+                -2px 1px 0 #ffffff,
+                -2px 2px 0 #ffffff,
+                -1px -2px 0 #ffffff,
+                -1px -1px 0 #ffffff,
+                -1px 0px 0 #ffffff,
+                -1px 1px 0 #ffffff,
+                -1px 2px 0 #ffffff,
+                0px -2px 0 #ffffff,
+                0px -1px 0 #ffffff,
+                0px 1px 0 #ffffff,
+                0px 2px 0 #ffffff,
+                1px -2px 0 #ffffff,
+                1px -1px 0 #ffffff,
+                1px 0px 0 #ffffff,
+                1px 1px 0 #ffffff,
+                1px 2px 0 #ffffff,
+                2px -2px 0 #ffffff,
+                2px -1px 0 #ffffff,
+                2px 0px 0 #ffffff,
+                2px 1px 0 #ffffff,
+                2px 2px 0 #ffffff;
+        }
+        .css_33KVChandulalBaradariKhilwath_Double_Pole_Structure_37 {
+            text-shadow: -2px -2px 0 #ffffff,
+                -2px -1px 0 #ffffff,
+                -2px 0px 0 #ffffff,
+                -2px 1px 0 #ffffff,
+                -2px 2px 0 #ffffff,
+                -1px -2px 0 #ffffff,
+                -1px -1px 0 #ffffff,
+                -1px 0px 0 #ffffff,
+                -1px 1px 0 #ffffff,
+                -1px 2px 0 #ffffff,
+                0px -2px 0 #ffffff,
+                0px -1px 0 #ffffff,
+                0px 1px 0 #ffffff,
+                0px 2px 0 #ffffff,
+                1px -2px 0 #ffffff,
+                1px -1px 0 #ffffff,
+                1px 0px 0 #ffffff,
+                1px 1px 0 #ffffff,
+                1px 2px 0 #ffffff,
+                2px -2px 0 #ffffff,
+                2px -1px 0 #ffffff,
+                2px 0px 0 #ffffff,
+                2px 1px 0 #ffffff,
+                2px 2px 0 #ffffff;
+        }
+        .css_220KVSHIVRAMPALLY33KVHYDERGUDAS2_40 {
+            text-shadow: -2px -2px 0 #ffffff,
+                -2px -1px 0 #ffffff,
+                -2px 0px 0 #ffffff,
+                -2px 1px 0 #ffffff,
+                -2px 2px 0 #ffffff,
+                -1px -2px 0 #ffffff,
+                -1px -1px 0 #ffffff,
+                -1px 0px 0 #ffffff,
+                -1px 1px 0 #ffffff,
+                -1px 2px 0 #ffffff,
+                0px -2px 0 #ffffff,
+                0px -1px 0 #ffffff,
+                0px 1px 0 #ffffff,
+                0px 2px 0 #ffffff,
+                1px -2px 0 #ffffff,
+                1px -1px 0 #ffffff,
+                1px 0px 0 #ffffff,
+                1px 1px 0 #ffffff,
+                1px 2px 0 #ffffff,
+                2px -2px 0 #ffffff,
+                2px -1px 0 #ffffff,
+                2px 0px 0 #ffffff,
+                2px 1px 0 #ffffff,
+                2px 2px 0 #ffffff;
+        }
+        .css_220KVSHIVRAMPALLY33KVHYDERGUDAS2_AB_Switch_41 {
+            text-shadow: -2px -2px 0 #ffffff,
+                -2px -1px 0 #ffffff,
+                -2px 0px 0 #ffffff,
+                -2px 1px 0 #ffffff,
+                -2px 2px 0 #ffffff,
+                -1px -2px 0 #ffffff,
+                -1px -1px 0 #ffffff,
+                -1px 0px 0 #ffffff,
+                -1px 1px 0 #ffffff,
+                -1px 2px 0 #ffffff,
+                0px -2px 0 #ffffff,
+                0px -1px 0 #ffffff,
+                0px 1px 0 #ffffff,
+                0px 2px 0 #ffffff,
+                1px -2px 0 #ffffff,
+                1px -1px 0 #ffffff,
+                1px 0px 0 #ffffff,
+                1px 1px 0 #ffffff,
+                1px 2px 0 #ffffff,
+                2px -2px 0 #ffffff,
+                2px -1px 0 #ffffff,
+                2px 0px 0 #ffffff,
+                2px 1px 0 #ffffff,
+                2px 2px 0 #ffffff;
+        }
+        .css_220KVSHIVRAMPALLY33KVHYDERGUDAS2_Double_Pole_Structure_42 {
+            text-shadow: -2px -2px 0 #ffffff,
+                -2px -1px 0 #ffffff,
+                -2px 0px 0 #ffffff,
+                -2px 1px 0 #ffffff,
+                -2px 2px 0 #ffffff,
+                -1px -2px 0 #ffffff,
+                -1px -1px 0 #ffffff,
+                -1px 0px 0 #ffffff,
+                -1px 1px 0 #ffffff,
+                -1px 2px 0 #ffffff,
+                0px -2px 0 #ffffff,
+                0px -1px 0 #ffffff,
+                0px 1px 0 #ffffff,
+                0px 2px 0 #ffffff,
+                1px -2px 0 #ffffff,
+                1px -1px 0 #ffffff,
+                1px 0px 0 #ffffff,
+                1px 1px 0 #ffffff,
+                1px 2px 0 #ffffff,
+                2px -2px 0 #ffffff,
+                2px -1px 0 #ffffff,
+                2px 0px 0 #ffffff,
+                2px 1px 0 #ffffff,
+                2px 2px 0 #ffffff;
+        }
+        .css_220KVSHIVRAMPALLY33KVHYDERGUDAS1_45 {
+            text-shadow: -2px -2px 0 #ffffff,
+                -2px -1px 0 #ffffff,
+                -2px 0px 0 #ffffff,
+                -2px 1px 0 #ffffff,
+                -2px 2px 0 #ffffff,
+                -1px -2px 0 #ffffff,
+                -1px -1px 0 #ffffff,
+                -1px 0px 0 #ffffff,
+                -1px 1px 0 #ffffff,
+                -1px 2px 0 #ffffff,
+                0px -2px 0 #ffffff,
+                0px -1px 0 #ffffff,
+                0px 1px 0 #ffffff,
+                0px 2px 0 #ffffff,
+                1px -2px 0 #ffffff,
+                1px -1px 0 #ffffff,
+                1px 0px 0 #ffffff,
+                1px 1px 0 #ffffff,
+                1px 2px 0 #ffffff,
+                2px -2px 0 #ffffff,
+                2px -1px 0 #ffffff,
+                2px 0px 0 #ffffff,
+                2px 1px 0 #ffffff,
+                2px 2px 0 #ffffff;
+        }
+        .css_220KVSHIVRAMPALLY33KVHYDERGUDAS1_AB_Switch_46 {
+            text-shadow: -2px -2px 0 #ffffff,
+                -2px -1px 0 #ffffff,
+                -2px 0px 0 #ffffff,
+                -2px 1px 0 #ffffff,
+                -2px 2px 0 #ffffff,
+                -1px -2px 0 #ffffff,
+                -1px -1px 0 #ffffff,
+                -1px 0px 0 #ffffff,
+                -1px 1px 0 #ffffff,
+                -1px 2px 0 #ffffff,
+                0px -2px 0 #ffffff,
+                0px -1px 0 #ffffff,
+                0px 1px 0 #ffffff,
+                0px 2px 0 #ffffff,
+                1px -2px 0 #ffffff,
+                1px -1px 0 #ffffff,
+                1px 0px 0 #ffffff,
+                1px 1px 0 #ffffff,
+                1px 2px 0 #ffffff,
+                2px -2px 0 #ffffff,
+                2px -1px 0 #ffffff,
+                2px 0px 0 #ffffff,
+                2px 1px 0 #ffffff,
+                2px 2px 0 #ffffff;
+        }
+        .css_220KVSHIVRAMPALLY33KVHYDERGUDAS1_Double_Pole_Structure_47 {
+            text-shadow: -2px -2px 0 #ffffff,
+                -2px -1px 0 #ffffff,
+                -2px 0px 0 #ffffff,
+                -2px 1px 0 #ffffff,
+                -2px 2px 0 #ffffff,
+                -1px -2px 0 #ffffff,
+                -1px -1px 0 #ffffff,
+                -1px 0px 0 #ffffff,
+                -1px 1px 0 #ffffff,
+                -1px 2px 0 #ffffff,
+                0px -2px 0 #ffffff,
+                0px -1px 0 #ffffff,
+                0px 1px 0 #ffffff,
+                0px 2px 0 #ffffff,
+                1px -2px 0 #ffffff,
+                1px -1px 0 #ffffff,
+                1px 0px 0 #ffffff,
+                1px 1px 0 #ffffff,
+                1px 2px 0 #ffffff,
+                2px -2px 0 #ffffff,
+                2px -1px 0 #ffffff,
+                2px 0px 0 #ffffff,
+                2px 1px 0 #ffffff,
+                2px 2px 0 #ffffff;
+        }
+        .css_220KVSHIVRAMPALLY33KVATTAPUR_50 {
+            text-shadow: -2px -2px 0 #ffffff,
+                -2px -1px 0 #ffffff,
+                -2px 0px 0 #ffffff,
+                -2px 1px 0 #ffffff,
+                -2px 2px 0 #ffffff,
+                -1px -2px 0 #ffffff,
+                -1px -1px 0 #ffffff,
+                -1px 0px 0 #ffffff,
+                -1px 1px 0 #ffffff,
+                -1px 2px 0 #ffffff,
+                0px -2px 0 #ffffff,
+                0px -1px 0 #ffffff,
+                0px 1px 0 #ffffff,
+                0px 2px 0 #ffffff,
+                1px -2px 0 #ffffff,
+                1px -1px 0 #ffffff,
+                1px 0px 0 #ffffff,
+                1px 1px 0 #ffffff,
+                1px 2px 0 #ffffff,
+                2px -2px 0 #ffffff,
+                2px -1px 0 #ffffff,
+                2px 0px 0 #ffffff,
+                2px 1px 0 #ffffff,
+                2px 2px 0 #ffffff;
+        }
+        .css_220KVSHIVRAMPALLY33KVATTAPUR_AB_Switch_51 {
+            text-shadow: -2px -2px 0 #ffffff,
+                -2px -1px 0 #ffffff,
+                -2px 0px 0 #ffffff,
+                -2px 1px 0 #ffffff,
+                -2px 2px 0 #ffffff,
+                -1px -2px 0 #ffffff,
+                -1px -1px 0 #ffffff,
+                -1px 0px 0 #ffffff,
+                -1px 1px 0 #ffffff,
+                -1px 2px 0 #ffffff,
+                0px -2px 0 #ffffff,
+                0px -1px 0 #ffffff,
+                0px 1px 0 #ffffff,
+                0px 2px 0 #ffffff,
+                1px -2px 0 #ffffff,
+                1px -1px 0 #ffffff,
+                1px 0px 0 #ffffff,
+                1px 1px 0 #ffffff,
+                1px 2px 0 #ffffff,
+                2px -2px 0 #ffffff,
+                2px -1px 0 #ffffff,
+                2px 0px 0 #ffffff,
+                2px 1px 0 #ffffff,
+                2px 2px 0 #ffffff;
+        }
+        .css_220KVSHIVRAMPALLY33KVATTAPUR_Double_Pole_Structure_52 {
+            text-shadow: -2px -2px 0 #ffffff,
+                -2px -1px 0 #ffffff,
+                -2px 0px 0 #ffffff,
+                -2px 1px 0 #ffffff,
+                -2px 2px 0 #ffffff,
+                -1px -2px 0 #ffffff,
+                -1px -1px 0 #ffffff,
+                -1px 0px 0 #ffffff,
+                -1px 1px 0 #ffffff,
+                -1px 2px 0 #ffffff,
+                0px -2px 0 #ffffff,
+                0px -1px 0 #ffffff,
+                0px 1px 0 #ffffff,
+                0px 2px 0 #ffffff,
+                1px -2px 0 #ffffff,
+                1px -1px 0 #ffffff,
+                1px 0px 0 #ffffff,
+                1px 1px 0 #ffffff,
+                1px 2px 0 #ffffff,
+                2px -2px 0 #ffffff,
+                2px -1px 0 #ffffff,
+                2px 0px 0 #ffffff,
+                2px 1px 0 #ffffff,
+                2px 2px 0 #ffffff;
+        }
+        .css_132KVMYLARDEVULAPALLY33KVNPAMirlamFilterBedSS_55 {
+            text-shadow: -2px -2px 0 #ffffff,
+                -2px -1px 0 #ffffff,
+                -2px 0px 0 #ffffff,
+                -2px 1px 0 #ffffff,
+                -2px 2px 0 #ffffff,
+                -1px -2px 0 #ffffff,
+                -1px -1px 0 #ffffff,
+                -1px 0px 0 #ffffff,
+                -1px 1px 0 #ffffff,
+                -1px 2px 0 #ffffff,
+                0px -2px 0 #ffffff,
+                0px -1px 0 #ffffff,
+                0px 1px 0 #ffffff,
+                0px 2px 0 #ffffff,
+                1px -2px 0 #ffffff,
+                1px -1px 0 #ffffff,
+                1px 0px 0 #ffffff,
+                1px 1px 0 #ffffff,
+                1px 2px 0 #ffffff,
+                2px -2px 0 #ffffff,
+                2px -1px 0 #ffffff,
+                2px 0px 0 #ffffff,
+                2px 1px 0 #ffffff,
+                2px 2px 0 #ffffff;
+        }
+        .css_132KVMYLARDEVULAPALLY33KVNPAMirlamFilterBedSS_AB_Switch_56 {
+            text-shadow: -2px -2px 0 #ffffff,
+                -2px -1px 0 #ffffff,
+                -2px 0px 0 #ffffff,
+                -2px 1px 0 #ffffff,
+                -2px 2px 0 #ffffff,
+                -1px -2px 0 #ffffff,
+                -1px -1px 0 #ffffff,
+                -1px 0px 0 #ffffff,
+                -1px 1px 0 #ffffff,
+                -1px 2px 0 #ffffff,
+                0px -2px 0 #ffffff,
+                0px -1px 0 #ffffff,
+                0px 1px 0 #ffffff,
+                0px 2px 0 #ffffff,
+                1px -2px 0 #ffffff,
+                1px -1px 0 #ffffff,
+                1px 0px 0 #ffffff,
+                1px 1px 0 #ffffff,
+                1px 2px 0 #ffffff,
+                2px -2px 0 #ffffff,
+                2px -1px 0 #ffffff,
+                2px 0px 0 #ffffff,
+                2px 1px 0 #ffffff,
+                2px 2px 0 #ffffff;
+        }
+        .css_132KVMYLARDEVULAPALLY33KVNPAMirlamFilterBedSS_Double_Pole_Structure_57 {
+            text-shadow: -2px -2px 0 #ffffff,
+                -2px -1px 0 #ffffff,
+                -2px 0px 0 #ffffff,
+                -2px 1px 0 #ffffff,
+                -2px 2px 0 #ffffff,
+                -1px -2px 0 #ffffff,
+                -1px -1px 0 #ffffff,
+                -1px 0px 0 #ffffff,
+                -1px 1px 0 #ffffff,
+                -1px 2px 0 #ffffff,
+                0px -2px 0 #ffffff,
+                0px -1px 0 #ffffff,
+                0px 1px 0 #ffffff,
+                0px 2px 0 #ffffff,
+                1px -2px 0 #ffffff,
+                1px -1px 0 #ffffff,
+                1px 0px 0 #ffffff,
+                1px 1px 0 #ffffff,
+                1px 2px 0 #ffffff,
+                2px -2px 0 #ffffff,
+                2px -1px 0 #ffffff,
+                2px 0px 0 #ffffff,
+                2px 1px 0 #ffffff,
+                2px 2px 0 #ffffff;
+        }
+        .css_132KVMYLARDEVULAPALLY33KVDEVIBAGH_60 {
+            text-shadow: -2px -2px 0 #ffffff,
+                -2px -1px 0 #ffffff,
+                -2px 0px 0 #ffffff,
+                -2px 1px 0 #ffffff,
+                -2px 2px 0 #ffffff,
+                -1px -2px 0 #ffffff,
+                -1px -1px 0 #ffffff,
+                -1px 0px 0 #ffffff,
+                -1px 1px 0 #ffffff,
+                -1px 2px 0 #ffffff,
+                0px -2px 0 #ffffff,
+                0px -1px 0 #ffffff,
+                0px 1px 0 #ffffff,
+                0px 2px 0 #ffffff,
+                1px -2px 0 #ffffff,
+                1px -1px 0 #ffffff,
+                1px 0px 0 #ffffff,
+                1px 1px 0 #ffffff,
+                1px 2px 0 #ffffff,
+                2px -2px 0 #ffffff,
+                2px -1px 0 #ffffff,
+                2px 0px 0 #ffffff,
+                2px 1px 0 #ffffff,
+                2px 2px 0 #ffffff;
+        }
+        .css_132KVMYLARDEVULAPALLY33KVDEVIBAGH_AB_Switch_61 {
+            text-shadow: -2px -2px 0 #ffffff,
+                -2px -1px 0 #ffffff,
+                -2px 0px 0 #ffffff,
+                -2px 1px 0 #ffffff,
+                -2px 2px 0 #ffffff,
+                -1px -2px 0 #ffffff,
+                -1px -1px 0 #ffffff,
+                -1px 0px 0 #ffffff,
+                -1px 1px 0 #ffffff,
+                -1px 2px 0 #ffffff,
+                0px -2px 0 #ffffff,
+                0px -1px 0 #ffffff,
+                0px 1px 0 #ffffff,
+                0px 2px 0 #ffffff,
+                1px -2px 0 #ffffff,
+                1px -1px 0 #ffffff,
+                1px 0px 0 #ffffff,
+                1px 1px 0 #ffffff,
+                1px 2px 0 #ffffff,
+                2px -2px 0 #ffffff,
+                2px -1px 0 #ffffff,
+                2px 0px 0 #ffffff,
+                2px 1px 0 #ffffff,
+                2px 2px 0 #ffffff;
+        }
+        .css_132KVMYLARDEVULAPALLY33KVDEVIBAGH_Double_Pole_Structure_62 {
+            text-shadow: -2px -2px 0 #ffffff,
+                -2px -1px 0 #ffffff,
+                -2px 0px 0 #ffffff,
+                -2px 1px 0 #ffffff,
+                -2px 2px 0 #ffffff,
+                -1px -2px 0 #ffffff,
+                -1px -1px 0 #ffffff,
+                -1px 0px 0 #ffffff,
+                -1px 1px 0 #ffffff,
+                -1px 2px 0 #ffffff,
+                0px -2px 0 #ffffff,
+                0px -1px 0 #ffffff,
+                0px 1px 0 #ffffff,
+                0px 2px 0 #ffffff,
+                1px -2px 0 #ffffff,
+                1px -1px 0 #ffffff,
+                1px 0px 0 #ffffff,
+                1px 1px 0 #ffffff,
+                1px 2px 0 #ffffff,
+                2px -2px 0 #ffffff,
+                2px -1px 0 #ffffff,
+                2px 0px 0 #ffffff,
+                2px 1px 0 #ffffff,
+                2px 2px 0 #ffffff;
+        }
+        .css_132KVIMLIBUN33KVSALARJUNGUGExtra_65 {
+            text-shadow: -2px -2px 0 #ffffff,
+                -2px -1px 0 #ffffff,
+                -2px 0px 0 #ffffff,
+                -2px 1px 0 #ffffff,
+                -2px 2px 0 #ffffff,
+                -1px -2px 0 #ffffff,
+                -1px -1px 0 #ffffff,
+                -1px 0px 0 #ffffff,
+                -1px 1px 0 #ffffff,
+                -1px 2px 0 #ffffff,
+                0px -2px 0 #ffffff,
+                0px -1px 0 #ffffff,
+                0px 1px 0 #ffffff,
+                0px 2px 0 #ffffff,
+                1px -2px 0 #ffffff,
+                1px -1px 0 #ffffff,
+                1px 0px 0 #ffffff,
+                1px 1px 0 #ffffff,
+                1px 2px 0 #ffffff,
+                2px -2px 0 #ffffff,
+                2px -1px 0 #ffffff,
+                2px 0px 0 #ffffff,
+                2px 1px 0 #ffffff,
+                2px 2px 0 #ffffff;
+        }
+        .css_132KVIMLIBUN33KVSALARJUNGUGExtra_AB_Switch_66 {
+            text-shadow: -2px -2px 0 #ffffff,
+                -2px -1px 0 #ffffff,
+                -2px 0px 0 #ffffff,
+                -2px 1px 0 #ffffff,
+                -2px 2px 0 #ffffff,
+                -1px -2px 0 #ffffff,
+                -1px -1px 0 #ffffff,
+                -1px 0px 0 #ffffff,
+                -1px 1px 0 #ffffff,
+                -1px 2px 0 #ffffff,
+                0px -2px 0 #ffffff,
+                0px -1px 0 #ffffff,
+                0px 1px 0 #ffffff,
+                0px 2px 0 #ffffff,
+                1px -2px 0 #ffffff,
+                1px -1px 0 #ffffff,
+                1px 0px 0 #ffffff,
+                1px 1px 0 #ffffff,
+                1px 2px 0 #ffffff,
+                2px -2px 0 #ffffff,
+                2px -1px 0 #ffffff,
+                2px 0px 0 #ffffff,
+                2px 1px 0 #ffffff,
+                2px 2px 0 #ffffff;
+        }
+        .css_132KVIMLIBUN33KVSALARJUNGUGExtra_Double_Pole_Structure_67 {
+            text-shadow: -2px -2px 0 #ffffff,
+                -2px -1px 0 #ffffff,
+                -2px 0px 0 #ffffff,
+                -2px 1px 0 #ffffff,
+                -2px 2px 0 #ffffff,
+                -1px -2px 0 #ffffff,
+                -1px -1px 0 #ffffff,
+                -1px 0px 0 #ffffff,
+                -1px 1px 0 #ffffff,
+                -1px 2px 0 #ffffff,
+                0px -2px 0 #ffffff,
+                0px -1px 0 #ffffff,
+                0px 1px 0 #ffffff,
+                0px 2px 0 #ffffff,
+                1px -2px 0 #ffffff,
+                1px -1px 0 #ffffff,
+                1px 0px 0 #ffffff,
+                1px 1px 0 #ffffff,
+                1px 2px 0 #ffffff,
+                2px -2px 0 #ffffff,
+                2px -1px 0 #ffffff,
+                2px 0px 0 #ffffff,
+                2px 1px 0 #ffffff,
+                2px 2px 0 #ffffff;
+        }
+        .css_132KVIMLIBUN33KVSALARJUNGOH_70 {
+            text-shadow: -2px -2px 0 #ffffff,
+                -2px -1px 0 #ffffff,
+                -2px 0px 0 #ffffff,
+                -2px 1px 0 #ffffff,
+                -2px 2px 0 #ffffff,
+                -1px -2px 0 #ffffff,
+                -1px -1px 0 #ffffff,
+                -1px 0px 0 #ffffff,
+                -1px 1px 0 #ffffff,
+                -1px 2px 0 #ffffff,
+                0px -2px 0 #ffffff,
+                0px -1px 0 #ffffff,
+                0px 1px 0 #ffffff,
+                0px 2px 0 #ffffff,
+                1px -2px 0 #ffffff,
+                1px -1px 0 #ffffff,
+                1px 0px 0 #ffffff,
+                1px 1px 0 #ffffff,
+                1px 2px 0 #ffffff,
+                2px -2px 0 #ffffff,
+                2px -1px 0 #ffffff,
+                2px 0px 0 #ffffff,
+                2px 1px 0 #ffffff,
+                2px 2px 0 #ffffff;
+        }
+        .css_132KVIMLIBUN33KVSALARJUNGOH_AB_Switch_71 {
+            text-shadow: -2px -2px 0 #ffffff,
+                -2px -1px 0 #ffffff,
+                -2px 0px 0 #ffffff,
+                -2px 1px 0 #ffffff,
+                -2px 2px 0 #ffffff,
+                -1px -2px 0 #ffffff,
+                -1px -1px 0 #ffffff,
+                -1px 0px 0 #ffffff,
+                -1px 1px 0 #ffffff,
+                -1px 2px 0 #ffffff,
+                0px -2px 0 #ffffff,
+                0px -1px 0 #ffffff,
+                0px 1px 0 #ffffff,
+                0px 2px 0 #ffffff,
+                1px -2px 0 #ffffff,
+                1px -1px 0 #ffffff,
+                1px 0px 0 #ffffff,
+                1px 1px 0 #ffffff,
+                1px 2px 0 #ffffff,
+                2px -2px 0 #ffffff,
+                2px -1px 0 #ffffff,
+                2px 0px 0 #ffffff,
+                2px 1px 0 #ffffff,
+                2px 2px 0 #ffffff;
+        }
+        .css_132KVIMLIBUN33KVSALARJUNGOH_Double_Pole_Structure_72 {
+            text-shadow: -2px -2px 0 #ffffff,
+                -2px -1px 0 #ffffff,
+                -2px 0px 0 #ffffff,
+                -2px 1px 0 #ffffff,
+                -2px 2px 0 #ffffff,
+                -1px -2px 0 #ffffff,
+                -1px -1px 0 #ffffff,
+                -1px 0px 0 #ffffff,
+                -1px 1px 0 #ffffff,
+                -1px 2px 0 #ffffff,
+                0px -2px 0 #ffffff,
+                0px -1px 0 #ffffff,
+                0px 1px 0 #ffffff,
+                0px 2px 0 #ffffff,
+                1px -2px 0 #ffffff,
+                1px -1px 0 #ffffff,
+                1px 0px 0 #ffffff,
+                1px 1px 0 #ffffff,
+                1px 2px 0 #ffffff,
+                2px -2px 0 #ffffff,
+                2px -1px 0 #ffffff,
+                2px 0px 0 #ffffff,
+                2px 1px 0 #ffffff,
+                2px 2px 0 #ffffff;
+        }
+        .css_132KVIMLIBUN33KVPETLABURZ_75 {
+            text-shadow: -2px -2px 0 #ffffff,
+                -2px -1px 0 #ffffff,
+                -2px 0px 0 #ffffff,
+                -2px 1px 0 #ffffff,
+                -2px 2px 0 #ffffff,
+                -1px -2px 0 #ffffff,
+                -1px -1px 0 #ffffff,
+                -1px 0px 0 #ffffff,
+                -1px 1px 0 #ffffff,
+                -1px 2px 0 #ffffff,
+                0px -2px 0 #ffffff,
+                0px -1px 0 #ffffff,
+                0px 1px 0 #ffffff,
+                0px 2px 0 #ffffff,
+                1px -2px 0 #ffffff,
+                1px -1px 0 #ffffff,
+                1px 0px 0 #ffffff,
+                1px 1px 0 #ffffff,
+                1px 2px 0 #ffffff,
+                2px -2px 0 #ffffff,
+                2px -1px 0 #ffffff,
+                2px 0px 0 #ffffff,
+                2px 1px 0 #ffffff,
+                2px 2px 0 #ffffff;
+        }
+        .css_132KVIMLIBUN33KVPETLABURZ_AB_Switch_76 {
+            text-shadow: -2px -2px 0 #ffffff,
+                -2px -1px 0 #ffffff,
+                -2px 0px 0 #ffffff,
+                -2px 1px 0 #ffffff,
+                -2px 2px 0 #ffffff,
+                -1px -2px 0 #ffffff,
+                -1px -1px 0 #ffffff,
+                -1px 0px 0 #ffffff,
+                -1px 1px 0 #ffffff,
+                -1px 2px 0 #ffffff,
+                0px -2px 0 #ffffff,
+                0px -1px 0 #ffffff,
+                0px 1px 0 #ffffff,
+                0px 2px 0 #ffffff,
+                1px -2px 0 #ffffff,
+                1px -1px 0 #ffffff,
+                1px 0px 0 #ffffff,
+                1px 1px 0 #ffffff,
+                1px 2px 0 #ffffff,
+                2px -2px 0 #ffffff,
+                2px -1px 0 #ffffff,
+                2px 0px 0 #ffffff,
+                2px 1px 0 #ffffff,
+                2px 2px 0 #ffffff;
+        }
+        .css_132KVIMLIBUN33KVPETLABURZ_Double_Pole_Structure_77 {
+            text-shadow: -2px -2px 0 #ffffff,
+                -2px -1px 0 #ffffff,
+                -2px 0px 0 #ffffff,
+                -2px 1px 0 #ffffff,
+                -2px 2px 0 #ffffff,
+                -1px -2px 0 #ffffff,
+                -1px -1px 0 #ffffff,
+                -1px 0px 0 #ffffff,
+                -1px 1px 0 #ffffff,
+                -1px 2px 0 #ffffff,
+                0px -2px 0 #ffffff,
+                0px -1px 0 #ffffff,
+                0px 1px 0 #ffffff,
+                0px 2px 0 #ffffff,
+                1px -2px 0 #ffffff,
+                1px -1px 0 #ffffff,
+                1px 0px 0 #ffffff,
+                1px 1px 0 #ffffff,
+                1px 2px 0 #ffffff,
+                2px -2px 0 #ffffff,
+                2px -1px 0 #ffffff,
+                2px 0px 0 #ffffff,
+                2px 1px 0 #ffffff,
+                2px 2px 0 #ffffff;
+        }
+        .css_132KVIMLIBUN33KVPANJESHAH_80 {
+            text-shadow: -2px -2px 0 #ffffff,
+                -2px -1px 0 #ffffff,
+                -2px 0px 0 #ffffff,
+                -2px 1px 0 #ffffff,
+                -2px 2px 0 #ffffff,
+                -1px -2px 0 #ffffff,
+                -1px -1px 0 #ffffff,
+                -1px 0px 0 #ffffff,
+                -1px 1px 0 #ffffff,
+                -1px 2px 0 #ffffff,
+                0px -2px 0 #ffffff,
+                0px -1px 0 #ffffff,
+                0px 1px 0 #ffffff,
+                0px 2px 0 #ffffff,
+                1px -2px 0 #ffffff,
+                1px -1px 0 #ffffff,
+                1px 0px 0 #ffffff,
+                1px 1px 0 #ffffff,
+                1px 2px 0 #ffffff,
+                2px -2px 0 #ffffff,
+                2px -1px 0 #ffffff,
+                2px 0px 0 #ffffff,
+                2px 1px 0 #ffffff,
+                2px 2px 0 #ffffff;
+        }
+        .css_132KVIMLIBUN33KVPANJESHAH_AB_Switch_81 {
+            text-shadow: -2px -2px 0 #ffffff,
+                -2px -1px 0 #ffffff,
+                -2px 0px 0 #ffffff,
+                -2px 1px 0 #ffffff,
+                -2px 2px 0 #ffffff,
+                -1px -2px 0 #ffffff,
+                -1px -1px 0 #ffffff,
+                -1px 0px 0 #ffffff,
+                -1px 1px 0 #ffffff,
+                -1px 2px 0 #ffffff,
+                0px -2px 0 #ffffff,
+                0px -1px 0 #ffffff,
+                0px 1px 0 #ffffff,
+                0px 2px 0 #ffffff,
+                1px -2px 0 #ffffff,
+                1px -1px 0 #ffffff,
+                1px 0px 0 #ffffff,
+                1px 1px 0 #ffffff,
+                1px 2px 0 #ffffff,
+                2px -2px 0 #ffffff,
+                2px -1px 0 #ffffff,
+                2px 0px 0 #ffffff,
+                2px 1px 0 #ffffff,
+                2px 2px 0 #ffffff;
+        }
+        .css_132KVIMLIBUN33KVPANJESHAH_Double_Pole_Structure_82 {
+            text-shadow: -2px -2px 0 #ffffff,
+                -2px -1px 0 #ffffff,
+                -2px 0px 0 #ffffff,
+                -2px 1px 0 #ffffff,
+                -2px 2px 0 #ffffff,
+                -1px -2px 0 #ffffff,
+                -1px -1px 0 #ffffff,
+                -1px 0px 0 #ffffff,
+                -1px 1px 0 #ffffff,
+                -1px 2px 0 #ffffff,
+                0px -2px 0 #ffffff,
+                0px -1px 0 #ffffff,
+                0px 1px 0 #ffffff,
+                0px 2px 0 #ffffff,
+                1px -2px 0 #ffffff,
+                1px -1px 0 #ffffff,
+                1px 0px 0 #ffffff,
+                1px 1px 0 #ffffff,
+                1px 2px 0 #ffffff,
+                2px -2px 0 #ffffff,
+                2px -1px 0 #ffffff,
+                2px 0px 0 #ffffff,
+                2px 1px 0 #ffffff,
+                2px 2px 0 #ffffff;
+        }
+        .css_132KVIMLIBUN33KVKHILWATHUGC_85 {
+            text-shadow: -2px -2px 0 #ffffff,
+                -2px -1px 0 #ffffff,
+                -2px 0px 0 #ffffff,
+                -2px 1px 0 #ffffff,
+                -2px 2px 0 #ffffff,
+                -1px -2px 0 #ffffff,
+                -1px -1px 0 #ffffff,
+                -1px 0px 0 #ffffff,
+                -1px 1px 0 #ffffff,
+                -1px 2px 0 #ffffff,
+                0px -2px 0 #ffffff,
+                0px -1px 0 #ffffff,
+                0px 1px 0 #ffffff,
+                0px 2px 0 #ffffff,
+                1px -2px 0 #ffffff,
+                1px -1px 0 #ffffff,
+                1px 0px 0 #ffffff,
+                1px 1px 0 #ffffff,
+                1px 2px 0 #ffffff,
+                2px -2px 0 #ffffff,
+                2px -1px 0 #ffffff,
+                2px 0px 0 #ffffff,
+                2px 1px 0 #ffffff,
+                2px 2px 0 #ffffff;
+        }
+        .css_132KVIMLIBUN33KVKHILWATHUGC_AB_Switch_86 {
+            text-shadow: -2px -2px 0 #ffffff,
+                -2px -1px 0 #ffffff,
+                -2px 0px 0 #ffffff,
+                -2px 1px 0 #ffffff,
+                -2px 2px 0 #ffffff,
+                -1px -2px 0 #ffffff,
+                -1px -1px 0 #ffffff,
+                -1px 0px 0 #ffffff,
+                -1px 1px 0 #ffffff,
+                -1px 2px 0 #ffffff,
+                0px -2px 0 #ffffff,
+                0px -1px 0 #ffffff,
+                0px 1px 0 #ffffff,
+                0px 2px 0 #ffffff,
+                1px -2px 0 #ffffff,
+                1px -1px 0 #ffffff,
+                1px 0px 0 #ffffff,
+                1px 1px 0 #ffffff,
+                1px 2px 0 #ffffff,
+                2px -2px 0 #ffffff,
+                2px -1px 0 #ffffff,
+                2px 0px 0 #ffffff,
+                2px 1px 0 #ffffff,
+                2px 2px 0 #ffffff;
+        }
+        .css_132KVIMLIBUN33KVKHILWATHUGC_Double_Pole_Structure_87 {
+            text-shadow: -2px -2px 0 #ffffff,
+                -2px -1px 0 #ffffff,
+                -2px 0px 0 #ffffff,
+                -2px 1px 0 #ffffff,
+                -2px 2px 0 #ffffff,
+                -1px -2px 0 #ffffff,
+                -1px -1px 0 #ffffff,
+                -1px 0px 0 #ffffff,
+                -1px 1px 0 #ffffff,
+                -1px 2px 0 #ffffff,
+                0px -2px 0 #ffffff,
+                0px -1px 0 #ffffff,
+                0px 1px 0 #ffffff,
+                0px 2px 0 #ffffff,
+                1px -2px 0 #ffffff,
+                1px -1px 0 #ffffff,
+                1px 0px 0 #ffffff,
+                1px 1px 0 #ffffff,
+                1px 2px 0 #ffffff,
+                2px -2px 0 #ffffff,
+                2px -1px 0 #ffffff,
+                2px 0px 0 #ffffff,
+                2px 1px 0 #ffffff,
+                2px 2px 0 #ffffff;
+        }
+        .css_132KVCHANCHALGUDA33KVPANJESHA_90 {
+            text-shadow: -2px -2px 0 #ffffff,
+                -2px -1px 0 #ffffff,
+                -2px 0px 0 #ffffff,
+                -2px 1px 0 #ffffff,
+                -2px 2px 0 #ffffff,
+                -1px -2px 0 #ffffff,
+                -1px -1px 0 #ffffff,
+                -1px 0px 0 #ffffff,
+                -1px 1px 0 #ffffff,
+                -1px 2px 0 #ffffff,
+                0px -2px 0 #ffffff,
+                0px -1px 0 #ffffff,
+                0px 1px 0 #ffffff,
+                0px 2px 0 #ffffff,
+                1px -2px 0 #ffffff,
+                1px -1px 0 #ffffff,
+                1px 0px 0 #ffffff,
+                1px 1px 0 #ffffff,
+                1px 2px 0 #ffffff,
+                2px -2px 0 #ffffff,
+                2px -1px 0 #ffffff,
+                2px 0px 0 #ffffff,
+                2px 1px 0 #ffffff,
+                2px 2px 0 #ffffff;
+        }
+        .css_132KVCHANCHALGUDA33KVPANJESHA_AB_Switch_91 {
+            text-shadow: -2px -2px 0 #ffffff,
+                -2px -1px 0 #ffffff,
+                -2px 0px 0 #ffffff,
+                -2px 1px 0 #ffffff,
+                -2px 2px 0 #ffffff,
+                -1px -2px 0 #ffffff,
+                -1px -1px 0 #ffffff,
+                -1px 0px 0 #ffffff,
+                -1px 1px 0 #ffffff,
+                -1px 2px 0 #ffffff,
+                0px -2px 0 #ffffff,
+                0px -1px 0 #ffffff,
+                0px 1px 0 #ffffff,
+                0px 2px 0 #ffffff,
+                1px -2px 0 #ffffff,
+                1px -1px 0 #ffffff,
+                1px 0px 0 #ffffff,
+                1px 1px 0 #ffffff,
+                1px 2px 0 #ffffff,
+                2px -2px 0 #ffffff,
+                2px -1px 0 #ffffff,
+                2px 0px 0 #ffffff,
+                2px 1px 0 #ffffff,
+                2px 2px 0 #ffffff;
+        }
+        .css_132KVCHANCHALGUDA33KVPANJESHA_Double_Pole_Structure_92 {
+            text-shadow: -2px -2px 0 #ffffff,
+                -2px -1px 0 #ffffff,
+                -2px 0px 0 #ffffff,
+                -2px 1px 0 #ffffff,
+                -2px 2px 0 #ffffff,
+                -1px -2px 0 #ffffff,
+                -1px -1px 0 #ffffff,
+                -1px 0px 0 #ffffff,
+                -1px 1px 0 #ffffff,
+                -1px 2px 0 #ffffff,
+                0px -2px 0 #ffffff,
+                0px -1px 0 #ffffff,
+                0px 1px 0 #ffffff,
+                0px 2px 0 #ffffff,
+                1px -2px 0 #ffffff,
+                1px -1px 0 #ffffff,
+                1px 0px 0 #ffffff,
+                1px 1px 0 #ffffff,
+                1px 2px 0 #ffffff,
+                2px -2px 0 #ffffff,
+                2px -1px 0 #ffffff,
+                2px 0px 0 #ffffff,
+                2px 1px 0 #ffffff,
+                2px 2px 0 #ffffff;
+        }

@@ -1,0 +1,1 @@
+var json_132KVIMLIBUN33KVPANJESHAH_Double_Pole_Structure_82 = {"type":"FeatureCollection","name":"132KVIMLIBUN33KVPANJESHAH_Double_Pole_Structure_82","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}},"features":[]}

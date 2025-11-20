@@ -1,0 +1,1 @@
+var json_132KVIMLIBUN33KVSALARJUNGUGExtra_Double_Pole_Structure_67 = {"type":"FeatureCollection","name":"132KVIMLIBUN33KVSALARJUNGUGExtra_Double_Pole_Structure_67","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}},"features":[]}

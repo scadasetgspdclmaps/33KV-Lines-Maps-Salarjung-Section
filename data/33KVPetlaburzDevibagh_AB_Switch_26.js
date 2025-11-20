@@ -1,0 +1,1 @@
+var json_33KVPetlaburzDevibagh_AB_Switch_26 = {"type":"FeatureCollection","name":"33KVPetlaburzDevibagh_AB_Switch_26","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}},"features":[{"type":"Feature","properties":{"fid":"1","Label":"AB"},"geometry":{"type":"Point","coordinates":[78.455777,17.360744]}}]}

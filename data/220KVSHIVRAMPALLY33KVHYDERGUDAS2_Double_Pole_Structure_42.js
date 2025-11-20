@@ -1,0 +1,1 @@
+var json_220KVSHIVRAMPALLY33KVHYDERGUDAS2_Double_Pole_Structure_42 = {"type":"FeatureCollection","name":"220KVSHIVRAMPALLY33KVHYDERGUDAS2_Double_Pole_Structure_42","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}},"features":[]}

@@ -1,0 +1,1 @@
+var json_132KVMYLARDEVULAPALLY33KVNPAMirlamFilterBedSS_Double_Pole_Structure_57 = {"type":"FeatureCollection","name":"132KVMYLARDEVULAPALLY33KVNPAMirlamFilterBedSS_Double_Pole_Structure_57","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}},"features":[]}

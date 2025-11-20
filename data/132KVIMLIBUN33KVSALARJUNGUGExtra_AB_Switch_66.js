@@ -1,0 +1,1 @@
+var json_132KVIMLIBUN33KVSALARJUNGUGExtra_AB_Switch_66 = {"type":"FeatureCollection","name":"132KVIMLIBUN33KVSALARJUNGUGExtra_AB_Switch_66","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}},"features":[{"type":"Feature","properties":{"fid":"1","Label":"AB"},"geometry":{"type":"Point","coordinates":[78.48282,17.37652]}}]}

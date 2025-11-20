@@ -1,0 +1,1 @@
+var json_33KVHydergudaIIAttapur_AB_Switch_31 = {"type":"FeatureCollection","name":"33KVHydergudaIIAttapur_AB_Switch_31","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}},"features":[{"type":"Feature","properties":{"fid":"1","Label":"AB"},"geometry":{"type":"Point","coordinates":[78.414777,17.365385]}}]}
